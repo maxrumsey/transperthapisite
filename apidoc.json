@@ -1,0 +1,9 @@
+{
+  "name": "Transperth API",
+  "version": "1.0.0",
+  "description": "API Documentation for the Unofficial Transperth API.",
+  "footer": {
+    "filename" : "./docsource/footer.md",
+    "title": "Footer"
+  }
+}

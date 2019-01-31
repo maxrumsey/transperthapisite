@@ -1,0 +1,24 @@
+{
+  "name": "transperthapisite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "build": "./node_modules/.bin/apidoc -i routers/api/ -o docs/",
+    "prestart": "npm run build",
+    "watch": "./node_modules/.bin/nodemon --exec \"npm start\" -i docs/",
+    "postinstall": "mkdir docs"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "transperthapi": "^1.0.1"
+  },
+  "devDependencies": {
+    "apidoc": "^0.17.7",
+    "nodemon": "^1.18.9"
+  }
+}
