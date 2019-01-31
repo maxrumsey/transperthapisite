@@ -13,12 +13,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "apidoc": "^0.17.7",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
     "transperthapi": "^1.0.1"
   },
   "devDependencies": {
-    "apidoc": "^0.17.7",
     "nodemon": "^1.18.9"
   }
 }
