@@ -1,8 +1,12 @@
 const express = require('express');
 const app = express();
 
-require('./routers/index.js')(app);
+app.set('view engine', 'ejs');
 app.use('/reference/', express.static('docs'))
+app.use('/static/', express.static('static'))
+
+require('./routers/index.js')(app);
+
 app.listen(process.env.PORT || 8090, () => {
   console.log('Server started.')
 })

@@ -4,4 +4,6 @@ module.exports = app => {
     next()
   })
   app.use('/api/', require('./api/index.js'))
+  //app.use('/calc/', require('./calc/index.js'))
+  require('./top/index.js')(app);
 }
