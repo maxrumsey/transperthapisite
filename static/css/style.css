@@ -50,3 +50,10 @@ footer {
 .section:last-child {
   border-bottom: 0;
 }
+#about {
+  background-color: #f8f9fa;
+  padding: 1rem 50px;
+}
+#about h2 {
+  
+}

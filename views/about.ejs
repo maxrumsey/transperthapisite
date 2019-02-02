@@ -9,7 +9,16 @@
       <img id='banner-image' src='/static/img/background.jpg' class='img-fluid'></img>
       <h1 class='centered'>Unofficial TransPerth API</h1>
     </header>
-    <h2 style='text-align: center; padding: 50px;'>TBA</h2>
+    <div id='about'>
+      <h2>What is this site?</h2>
+      <p>This is a site that hosts the unofficial TransPerth API. Along with the actual API, it also features API documentation and multiple calculators designed for regular use</p>
+      <h2>Is this site free?</h2>
+      <p>Yes. However, ratelimits are applied so if you're looking unrestricted access you can use the <a href='https://npmjs.org/package/transperthapi'>TransPerthAPI Package on NPM</a>.</p>
+      <h2>Describe the technology stack.</h2>
+      <p>This website uses the <a href='https://expressjs.com'>ExpressJS Webserver Library</a> to serve files. <a href='ejs.co'>EJS</a> is used to render files on the server-side. We use <a href='http://apidocjs.com'>API Doc</a> to automatically generate documentation. The application runs <a href='https://nodejs.org/'>NodeJS</a>.</p>
+      <h2>Where do you host this website?</h2>
+      <p>Our hosting provider is <a href='https://heroku.com'>Heroku</a></p>
+    </div>
     <%- include('_footer'); %>
   </body>
 </html>
