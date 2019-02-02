@@ -16,7 +16,7 @@
     "apidoc": "^0.17.7",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
-    "transperthapi": "^1.0.2"
+    "transperthapi": "^1.0.3"
   },
   "devDependencies": {
     "nodemon": "^1.18.9"
