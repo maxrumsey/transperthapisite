@@ -43,3 +43,10 @@ footer {
 #form-output ul {
   margin-bottom: 0;
 }
+.section {
+  margin-top: 0.5rem;
+  border-bottom: 3px solid #f8f9fa;
+}
+.section:last-child {
+  border-bottom: 0;
+}

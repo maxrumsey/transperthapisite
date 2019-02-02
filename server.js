@@ -4,6 +4,7 @@ const app = express();
 app.set('view engine', 'ejs');
 app.use('/reference/', express.static('docs'))
 app.use('/static/', express.static('static'))
+app.use(express.static('topstatic'))
 
 require('./routers/index.js')(app);
 

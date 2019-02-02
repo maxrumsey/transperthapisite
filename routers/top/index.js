@@ -8,7 +8,7 @@ module.exports = app => {
   app.get('/calc/smartrider', (req, res) => {
     res.render('calc/smartrider')
   })
-  app.get('/train', (req, res) => {
+  app.get('/calc/train', (req, res) => {
     res.render('calc/train')
   })
   app.get('/calc/ferry', (req, res) => {

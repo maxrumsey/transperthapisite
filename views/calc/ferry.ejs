@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <%- include('../_header'); %>
+    <title>Ferry Lookup | TransPerth API</title>
+  </head>
+  <body>
+    <%- include('../_navbar'); %>
+    <header class='mini-header'>
+      <h1>Ferry Lookup</h1>
+    </header>
+    <div id='form-container'>
+
+      <form>
+        <div id='error-container' class="form-group">
+        </div>
+        <div class="form-group">
+          <label for="ferry-stop-input">Wharf</label>
+          <select type="select" class="form-control custom-select" id="ferry-stop-input">
+            <option selected value='99998'>Mends St - To Perth</option>
+            <option value='99997'>Elizabeth Quay - From Perth</option>
+          </select>
+        </div>
+        <div class='form-group'>
+          <button type="button" class="btn btn-primary" id='form-submit' onclick='ferryTimesFormSubmit()' disabled>Submit</button>
+        </div>
+      </form>
+      <div id='form-output'>
+      </div>
+    </div>
+    <%- include('../_footer'); %>
+  </body>
+</html>

@@ -1,7 +1,7 @@
 {
   "name": "transperthapisite",
   "version": "1.0.0",
-  "description": "",
+  "description": "A REST API that scrapes data from TransPerth.",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -10,13 +10,13 @@
     "watch": "./node_modules/.bin/nodemon --exec \"npm start\" -i docs/",
     "postinstall": "mkdir docs"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Max Rumsey <max@maxrumsey.xyz> (maxrumsey.xyz)",
+  "license": "MIT",
   "dependencies": {
     "apidoc": "^0.17.7",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
-    "transperthapi": "^1.0.1"
+    "transperthapi": "^1.0.2"
   },
   "devDependencies": {
     "nodemon": "^1.18.9"
