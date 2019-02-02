@@ -5,5 +5,9 @@
   "footer": {
     "filename" : "./docsource/footer.md",
     "title": "Footer"
+  },
+  "header": {
+    "filename" : "./docsource/header.md",
+    "title": "Header"
   }
 }

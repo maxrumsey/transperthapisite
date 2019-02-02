@@ -21,3 +21,25 @@ header {
 #fake-link {
   cursor: pointer;
 }
+.card {
+  margin: 0 auto;
+}
+footer {
+  padding: 15px 50px;
+}
+.mini-header {
+  padding: 15px 0;
+}
+#form-container {
+  padding: 50px 100px;
+  background-color: #f8f9fa;
+}
+#form-output {
+  background-color: white;
+  border-radius: .25rem;
+  border: 1px solid #ced4da;
+  padding: 1rem;
+}
+#form-output ul {
+  margin-bottom: 0;
+}
