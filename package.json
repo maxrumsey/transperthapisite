@@ -8,7 +8,7 @@
     "build": "./node_modules/.bin/apidoc -i routers/api/ -o docs/",
     "prestart": "npm run build",
     "watch": "./node_modules/.bin/nodemon --exec \"npm start\" -i docs/",
-    "postinstall": "mkdir docs"
+    "postinstall": "mkdir -p docs"
   },
   "author": "Max Rumsey <max@maxrumsey.xyz> (maxrumsey.xyz)",
   "license": "MIT",
@@ -16,6 +16,7 @@
     "apidoc": "^0.17.7",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
+    "express-rate-limit": "^3.3.2",
     "transperthapi": "^1.0.3"
   },
   "devDependencies": {

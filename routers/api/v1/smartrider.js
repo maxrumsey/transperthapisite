@@ -2,7 +2,7 @@ const tp = require('transperthapi');
 const API = new tp();
 
 exports.check = (req, res) => {
-  if (!req.query.card_number) return res.status(400).json({error: 'Card number not found in query string.'});
+  if (!req.query.card_number) return res.status(400).json({msg: 'Card number not found.'});
 
   try {
     API.smartRiderInfo(req.query.card_number)

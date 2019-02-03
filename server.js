@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 
+app.enable('trust proxy');
 app.set('view engine', 'ejs');
 app.use('/reference/', express.static('docs'))
 app.use('/static/', express.static('static'))

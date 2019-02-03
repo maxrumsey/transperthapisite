@@ -21,12 +21,20 @@
           </select>
         </div>
         <div class="form-group">
-          <label for="train-line-input">Train Line</label>
-          <input type="text" class="form-control" id="train-line-input" placeholder="Mandurah">
+          <label for="train-line-input">Direction</label>
+          <select type="select" class="form-control custom-select" id="train-line-input">
+            <option selected value='Mandurah'>Mandurah Trainline</option>
+            <option value='Armadale'>Armadale Trainline</option>
+            <option value='Fremantle'>Fremantle Trainline</option>
+            <option value='Joondalup'>Joondalup Trainline</option>
+            <option value='Midland'>Midland Trainline</option>
+            <option value='Thornlie'>Thronlie Trainline</option>
+
+          </select>
         </div>
         <div class="form-group">
           <label for="train-station-input">Train Station</label>
-          <input type="text" class="form-control" id="train-station-input" placeholder="Cockburn Central">
+          <input type="text" class="form-control" id="train-station-input" placeholder="Cockburn Central" value='Cockburn Central'>
         </div>
         <div class='form-group'>
           <button type="button" class="btn btn-primary" id='form-submit' onclick='trainTimesFormSubmit()' disabled>Submit</button>

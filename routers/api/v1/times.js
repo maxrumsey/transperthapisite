@@ -6,7 +6,7 @@ const directions = [
 ]
 
 exports.bus = (req, res) => {
-  if (!req.query.stop_number) return res.status(400).json({msg: 'Bus stop number not found in query string.'});
+  if (!req.query.stop_number) return res.status(400).json({msg: 'Bus stop number not found.'});
 
   try {
     API.busStopTimes(req.query.stop_number)
@@ -22,7 +22,7 @@ exports.bus = (req, res) => {
   }
 }
 exports.ferry = (req, res) => {
-  if (!req.query.stop_number) return res.status(400).json({msg: 'Ferry stop number not found in query string.'});
+  if (!req.query.stop_number) return res.status(400).json({msg: 'Ferry stop number not found.'});
 
   try {
     API.ferryTimes(req.query.stop_number)
@@ -38,10 +38,10 @@ exports.ferry = (req, res) => {
   }
 }
 exports.train = (req, res) => {
-  if (!req.query.direction) return res.status(400).json({msg: 'Train direction not found in query string.'});
-  if (!req.query.trainline) return res.status(400).json({msg: 'Trainline not found in query string.'});
-  if (!req.query.station) return res.status(400).json({msg: 'Train station not found in query string.'});
-  if (!directions.includes(req.query.direction)) return res.status(400).json({msg: 'Train direction not either `to Perth` or `from Perth`'});
+  if (!req.query.direction) return res.status(400).json({msg: 'Train direction not found.'});
+  if (!req.query.trainline) return res.status(400).json({msg: 'Trainline not found.'});
+  if (!req.query.station) return res.status(400).json({msg: 'Train station not found.'});
+  if (!directions.includes(req.query.direction)) return res.status(400).json({msg: 'Train direction is not either `to Perth` or `from Perth`'});
 
   try {
     API.trainTimes({
@@ -50,6 +50,9 @@ exports.train = (req, res) => {
       station: req.query.station
     })
       .then(data => {
+        for (var i = 0; i < data.trains.length; i++) {
+          data.trains[i].stopping_pattern.replace(/ ./g, '.')
+        }
         res.status(200).json(data)
       })
       .catch(e => {
