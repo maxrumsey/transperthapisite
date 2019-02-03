@@ -38,11 +38,10 @@ exports.ferry = (req, res) => {
   }
 }
 exports.train = (req, res) => {
-  if (!req.query.direction) return res.status(400).json({msg: 'Train direction not found.'});
-  if (!req.query.trainline) return res.status(400).json({msg: 'Trainline not found.'});
-  if (!req.query.station) return res.status(400).json({msg: 'Train station not found.'});
-  if (!directions.includes(req.query.direction)) return res.status(400).json({msg: 'Train direction is not either `to Perth` or `from Perth`'});
-
+  if (!req.query.direction) return res.json({msg: 'Train direction not found.'});
+  if (!req.query.trainline) return res.json({msg: 'Trainline not found.'});
+  if (!req.query.station) return res.json({msg: 'Train station not found.'});
+  if (!directions.includes(req.query.direction)) return res.json({msg: 'Train direction is not either `to Perth` or `from Perth`'});
   try {
     API.trainTimes({
       direction: req.query.direction,
@@ -53,13 +52,13 @@ exports.train = (req, res) => {
         for (var i = 0; i < data.trains.length; i++) {
           data.trains[i].stopping_pattern.replace(/ ./g, '.')
         }
-        res.status(200).json(data)
+        res.json(data)
       })
       .catch(e => {
         console.error(e)
-        res.status(500).json(req.DEF_ERROR)
+        res.json(req.DEF_ERROR)
       })
   } catch (e) {
-    return res.status(400).json({ msg: e.message })
+    return res.json({ msg: e.message })
   }
 }
