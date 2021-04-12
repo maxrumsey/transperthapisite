@@ -13,7 +13,7 @@ RUN npm install
 # Copy the rest of your app's source code from your host to your image filesystem.
 COPY . .
 
-RUN npm build
+RUN npm run-script build
 
 # Run the specified command within the container.
 CMD [ "node", "server.js" ]
